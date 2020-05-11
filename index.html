@@ -92,6 +92,16 @@
 <title>——</title>
 
 <style type="text/css">
+  
+   @keyframes clock {
+  0% {
+    transform: translate3d(0px, -800px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg));
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+  
   body {
     position: absolute;
     top: 0;
@@ -146,6 +156,7 @@
     font-weight: 400;
     letter-spacing: .05em;
     cursor: pointer;
+    animation: 1s ease-out 0s 1 clock;
   }
 
   #search-form {
@@ -344,24 +355,15 @@
       grid-template-columns: repeat(5, 250px) 185px;
     }
   }
-</style>
+  
 
+</style>
 <div class="center">
   <time id="clock">
   animation: 1s ease-out 0s 1 clock;
   </time>
 </div>
 
-@keyframes clock {
-  0% {
-    transform: translate3d(0px, -800px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg));
-     opacity: 0;
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    opacity: 1;
-  }
-}
 
 <form class="overlay center" id="search-form" autocomplete="off" spellcheck="false">
   <div>
